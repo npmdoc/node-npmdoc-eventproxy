@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.eventproxy.eventproxy">
+            function <span class="apidocSignatureSpan"></span>eventproxy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.eventproxy.EventProxy">
             function <span class="apidocSignatureSpan">eventproxy.</span>EventProxy
             <span class="apidocSignatureSpan">()</span>
@@ -79,12 +88,66 @@
 
         </li>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventproxy.toString">
+            function <span class="apidocSignatureSpan">eventproxy.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eventproxy.create">module eventproxy.create</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventproxy.create.create">
+            function <span class="apidocSignatureSpan">eventproxy.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.eventproxy.toString">module eventproxy.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.eventproxy.toString.toString">
+            function <span class="apidocSignatureSpan">eventproxy.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.eventproxy" id="apidoc.module.eventproxy">module eventproxy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventproxy.eventproxy" id="apidoc.element.eventproxy.eventproxy">
+        function <span class="apidocSignatureSpan"></span>eventproxy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eventproxy = function () {
+  if (!(this instanceof EventProxy)) {
+    return new EventProxy();
+  }
+  this._callbacks = {};
+  this._fired = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -145,6 +208,87 @@ $.get(&#x22;template&#x22;, function (template) {
   ep.emit(&#x22;template&#x22;, template);
 });
 ...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.eventproxy.toString" id="apidoc.element.eventproxy.toString">
+        function <span class="apidocSignatureSpan">eventproxy.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eventproxy.create" id="apidoc.module.eventproxy.create">module eventproxy.create</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventproxy.create.create" id="apidoc.element.eventproxy.create.create">
+        function <span class="apidocSignatureSpan">eventproxy.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () {
+  var ep = new EventProxy();
+  var args = CONCAT.apply([], arguments);
+  if (args.length) {
+    var errorHandler = args[args.length - 1];
+    var callback = args[args.length - 2];
+    if (typeof errorHandler === &#x27;function&#x27; &#x26;&#x26; typeof callback === &#x27;function&#x27;) {
+      args.pop();
+      ep.fail(errorHandler);
+    }
+    ep.assign.apply(ep, args);
+  }
+  return ep;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+4. 友好的Error handling
+5. 无平台依赖，适合前后端，能用于浏览器和Node.js
+6. 兼容CMD，AMD以及CommonJS模块环境
+
+现在的，无深度嵌套的，并行的
+
+```js
+var ep = EventProxy.<span class="apidocCodeKeywordSpan">create</span>(&#x22;template&#x22;, &#x22;data&#x22;, &#x22;l10n&#x22;,
+function (template, data, l10n) {
+  _.template(template, data, l10n);
+});
+
+$.get(&#x22;template&#x22;, function (template) {
+  // something
+  ep.emit(&#x22;template&#x22;, template);
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.eventproxy.toString" id="apidoc.module.eventproxy.toString">module eventproxy.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.eventproxy.toString.toString" id="apidoc.element.eventproxy.toString.toString">
+        function <span class="apidocSignatureSpan">eventproxy.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 

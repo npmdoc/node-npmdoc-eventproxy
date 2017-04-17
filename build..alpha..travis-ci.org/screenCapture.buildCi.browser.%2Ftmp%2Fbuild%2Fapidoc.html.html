@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/JacksonTian/eventproxy"
-
-    >eventproxy (v0.3.5)</a>
+    <a href="https://github.com/JacksonTian/eventproxy">eventproxy (v0.3.5)</a>
 </h1>
 <h4>An implementation of task/event based asynchronous pattern.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.eventproxy">module eventproxy</a><ol>
 
@@ -182,7 +175,7 @@
   if (args.length) {
     var errorHandler = args[args.length - 1];
     var callback = args[args.length - 2];
-    if (typeof errorHandler === &#x27;function&#x27; &#x26;&#x26; typeof callback === &#x27;function&#x27;) {
+    if (typeof errorHandler === 'function' &amp;&amp; typeof callback === 'function') {
       args.pop();
       ep.fail(errorHandler);
     }
@@ -191,21 +184,21 @@
   return ep;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-4. 友好的Error handling
-5. 无平台依赖，适合前后端，能用于浏览器和Node.js
-6. 兼容CMD，AMD以及CommonJS模块环境
+4. å‹å¥½çš„Error handling
+5. æ—&nbsp;å¹³å°ä¾èµ–ï¼Œé€‚åˆå‰åŽç«¯ï¼Œèƒ½ç”¨äºŽæµè§ˆå™¨å’ŒNode.js
+6. å…¼å®¹CMDï¼ŒAMDä»¥åŠCommonJSæ¨¡å—çŽ¯å¢ƒ
 
-现在的，无深度嵌套的，并行的
+çŽ°åœ¨çš„ï¼Œæ—&nbsp;æ·±åº¦åµŒå¥—çš„ï¼Œå¹¶è¡Œçš„
 
 ```js
-var ep = EventProxy.<span class="apidocCodeKeywordSpan">create</span>(&#x22;template&#x22;, &#x22;data&#x22;, &#x22;l10n&#x22;,
+var ep = EventProxy.<span class="apidocCodeKeywordSpan">create</span>("template", "data", "l10n",
 function (template, data, l10n) {
   _.template(template, data, l10n);
 });
 
-$.get(&#x22;template&#x22;, function (template) {
+$.get("template", function (template) {
   // something
-  ep.emit(&#x22;template&#x22;, template);
+  ep.emit("template", template);
 });
 ...</pre></li>
     </ul>
@@ -245,7 +238,7 @@ $.get(&#x22;template&#x22;, function (template) {
   if (args.length) {
     var errorHandler = args[args.length - 1];
     var callback = args[args.length - 2];
-    if (typeof errorHandler === &#x27;function&#x27; &#x26;&#x26; typeof callback === &#x27;function&#x27;) {
+    if (typeof errorHandler === 'function' &amp;&amp; typeof callback === 'function') {
       args.pop();
       ep.fail(errorHandler);
     }
@@ -254,21 +247,21 @@ $.get(&#x22;template&#x22;, function (template) {
   return ep;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-4. 友好的Error handling
-5. 无平台依赖，适合前后端，能用于浏览器和Node.js
-6. 兼容CMD，AMD以及CommonJS模块环境
+4. å‹å¥½çš„Error handling
+5. æ—&nbsp;å¹³å°ä¾èµ–ï¼Œé€‚åˆå‰åŽç«¯ï¼Œèƒ½ç”¨äºŽæµè§ˆå™¨å’ŒNode.js
+6. å…¼å®¹CMDï¼ŒAMDä»¥åŠCommonJSæ¨¡å—çŽ¯å¢ƒ
 
-现在的，无深度嵌套的，并行的
+çŽ°åœ¨çš„ï¼Œæ—&nbsp;æ·±åº¦åµŒå¥—çš„ï¼Œå¹¶è¡Œçš„
 
 ```js
-var ep = EventProxy.<span class="apidocCodeKeywordSpan">create</span>(&#x22;template&#x22;, &#x22;data&#x22;, &#x22;l10n&#x22;,
+var ep = EventProxy.<span class="apidocCodeKeywordSpan">create</span>("template", "data", "l10n",
 function (template, data, l10n) {
   _.template(template, data, l10n);
 });
 
-$.get(&#x22;template&#x22;, function (template) {
+$.get("template", function (template) {
   // something
-  ep.emit(&#x22;template&#x22;, template);
+  ep.emit("template", template);
 });
 ...</pre></li>
     </ul>
@@ -300,3 +293,4 @@ $.get(&#x22;template&#x22;, function (template) {
     ]
 </div>
 </div>
+</body></html>
