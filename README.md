@@ -1,4 +1,7 @@
-# api documentation for  [eventproxy (v0.3.5)](https://github.com/JacksonTian/eventproxy)  [![npm package](https://img.shields.io/npm/v/npmdoc-eventproxy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eventproxy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eventproxy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eventproxy)
+# npmdoc-eventproxy
+
+#### basic api documentation for  [eventproxy (v0.3.5)](https://github.com/JacksonTian/eventproxy)  [![npm package](https://img.shields.io/npm/v/npmdoc-eventproxy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eventproxy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eventproxy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eventproxy)
+
 #### An implementation of task/event based asynchronous pattern.
 
 [![NPM](https://nodei.co/npm/eventproxy.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/eventproxy)
@@ -85,7 +88,8 @@
             "test"
         ]
     },
-    "version": "0.3.5"
+    "version": "0.3.5",
+    "bin": {}
 }
 ```
 
